@@ -2,7 +2,7 @@
 
 class HolbertonCourse {
   constructor(name, length, students) {
-    // Initializes the c;ass attributes
+    // Initializes the class attributes
     this._name = name;
     this._length = length;
     this._students = students;
