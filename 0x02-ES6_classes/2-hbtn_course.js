@@ -1,44 +1,42 @@
-/* eslint-disable no-unused-vars */
-
-class HolbertonCourse {
+export default class HolbertonCourse {
   constructor(name, length, students) {
-    // Initializes the class attributes
-    this._name = name;
-    this._length = length;
-    this._students = students;
+    this.name = name;
+    this.length = length;
+    this.students = students;
   }
 
-  // Get methods
+  // get and set method for name
   get name() {
     return this._name;
   }
 
-  get length() {
-    return this._length;
-  }
-
-  get students() {
-    return this._students;
-  }
-
-  // set methods
   set name(value) {
     if (typeof value !== 'string') {
-      throw new Error('Name must be a string');
+      throw new TypeError('Name must be a string');
     }
     this._name = value;
   }
 
+  // get and set method for length
+  get length() {
+    return this._length;
+  }
+
   set length(value) {
     if (typeof value !== 'number') {
-      throw new Error('Length must be a number');
+      throw new TypeError('Length must be a number');
     }
     this._length = value;
   }
 
+  // get and set methods for students
+  get students() {
+    return this._students;
+  }
+
   set students(value) {
-    if (!Array.isArray(value) || !value.every((student) => typeof student === 'string')) {
-      throw new Error('Students must be an array of strings');
+    if (!(Array.isArray(value) && value.every((students) => typeof students === 'string'))) {
+      throw new TypeError('Students must be an array of strings');
     }
     this._students = value;
   }
