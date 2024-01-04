@@ -5,6 +5,7 @@ export default class HolbertonCourse {
     this._validateAndSet('students', students, 'array');
   }
 
+  //get methods
   get name() {
     return this._name;
   }
@@ -21,6 +22,7 @@ export default class HolbertonCourse {
     this._validateAndSet('length', value, 'number');
   }
 
+  //set methods
   get students() {
     return this._students;
   }
