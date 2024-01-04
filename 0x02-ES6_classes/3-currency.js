@@ -23,7 +23,7 @@ export default class Currency {
     this._name = n;
   }
 
-  // method displayFullCurrency
+  // displayFullCurrency method
   displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
