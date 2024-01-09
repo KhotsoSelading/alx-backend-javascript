@@ -1,6 +1,6 @@
 const cleanSet = (set, startString) => {
   if (!startString) {
-    return '';
+    return [...set].join('-');
   }
 
   return [...set]
